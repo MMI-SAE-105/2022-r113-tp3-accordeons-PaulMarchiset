@@ -16,11 +16,11 @@
     }"
     >
     <button @click="isOpen = 1"></button>
-      <p id="Premier" x-show = "isOpen === 1">Lorem</p>
+      <div id="Premier" x-show = "isOpen === 1" x-transition.scale>Lorem</div>
     <button @click="isOpen = 2"></button>
-      <p id="Deuxième" x-show = "isOpen === 2">Ipsum</p>
+      <div id="Deuxième" x-show = "isOpen === 2" x-transition.scale>Ipsum</div>
     <button @click="isOpen = 3"></button>
-      <p id="Troisième" x-show = "isOpen === 3">Dolor</p>
+      <div id="Troisième" x-show = "isOpen === 3" x-transition.scale>Dolor</div>
   </div>
     </div>
   </body>
