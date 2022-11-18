@@ -10,5 +10,34 @@
   <body>
     <header><a href="/index.html">ACCUEIL</a></header>
     <h1>Accordéon horizontal</h1>
+    <ul id="accordeon" x-data="{01isopen:false}">
+      <li>
+        <figure>
+          <img src="/agenda-01.webp" alt="agenda" width="102" @click="01isopen = ! 01isopen">
+          <div x-show="01isopen">
+            <h3>Lorem, ipsum dolor.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </div>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="/agenda-01.webp" alt="agenda" width="102">
+          <figcaption>
+            <h3>Laborum, id error.</h3>
+            <p>Reprehenderit beatae quia necessitatibus in placeat.</p>
+          </figcaption>
+        </figure>
+      </li>
+      <li>
+        <figure>
+          <img src="/agenda-01.webp" alt="agenda 01" width="102">
+          <figcaption>
+            <h3>Qui, ab facere?</h3>
+            <p>Quasi, quas! Asperiores aut consectetur quos.</p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
   </body>
 </html>

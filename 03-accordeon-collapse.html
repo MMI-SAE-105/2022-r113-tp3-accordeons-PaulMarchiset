@@ -12,10 +12,19 @@
     <h1>Accordéon avec <code>x-collapse</code></h1>
     <div x-data="{ expanded: false }">
       <button @click="expanded = ! expanded">Bouton</button>
-   
-      <p x-show="expanded" x-collapse>
+        <div x-show="expanded" x-collapse.duration.1000ms>
           Lorem ipsum dolor sit amet consectetur adipisicing elit.
-      </p>
+        </div>
+    <div x-data="{ expanded: false }">
+      <button @click="expanded = ! expanded">Bouton</button>
+         <div x-show="expanded" x-collapse.duration.1000ms>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+    <div x-data="{ expanded: false }">
+      <button @click="expanded = ! expanded">Bouton</button>
+         <div x-show="expanded" x-collapse.duration.1000ms>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
   </div>
   </body>
 </html>
