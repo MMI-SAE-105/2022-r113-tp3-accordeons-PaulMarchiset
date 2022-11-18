@@ -8,6 +8,7 @@
     <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
+    <header><a href="/index.html">ACCUEIL</a></header>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
     <div
     x-data="{
@@ -15,11 +16,11 @@
     }"
     >
     <button @click="isOpen = 1"></button>
-      <div id="Premier" x-show = "isOpen === 1">Lorem</div>
+      <p id="Premier" x-show = "isOpen === 1">Lorem</p>
     <button @click="isOpen = 2"></button>
-      <div id="Deuxième" x-show = "isOpen === 2">Ipsum</div>
+      <p id="Deuxième" x-show = "isOpen === 2">Ipsum</p>
     <button @click="isOpen = 3"></button>
-      <div id="Troisième" x-show = "isOpen === 3">Dolor</div>
+      <p id="Troisième" x-show = "isOpen === 3">Dolor</p>
   </div>
     </div>
   </body>
