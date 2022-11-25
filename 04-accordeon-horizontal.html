@@ -5,36 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon horizontal</title>
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header><a href="/index.html">ACCUEIL</a></header>
-    <h1>Accordéon horizontal</h1>
-    <ul id="accordeon" x-data="{01isopen:false}">
-      <li>
+    <ul id="accordeon" x-data="{ouvert:1}">
+      <li :class="{'actif':ouvert===1,}" @click="ouvert=1">
         <figure>
-          <img src="/agenda-01.webp" alt="agenda" width="102" @click="01isopen = ! 01isopen">
-          <div x-show="01isopen">
+          <img src="https://picsum.photos/100?random=1" alt="" width="102"/>
+          <figcaption>
             <h3>Lorem, ipsum dolor.</h3>
             <p>Lorem ipsum dolor sit amet consectetur.</p>
-          </div>
-        </figure>
-      </li>
-      <li>
-        <figure>
-          <img src="/agenda-01.webp" alt="agenda" width="102">
-          <figcaption>
-            <h3>Laborum, id error.</h3>
-            <p>Reprehenderit beatae quia necessitatibus in placeat.</p>
           </figcaption>
         </figure>
       </li>
-      <li>
+      <li :class="{'actif':ouvert===2,}" @click="ouvert=2">
         <figure>
-          <img src="/agenda-01.webp" alt="agenda 01" width="102">
+          <img src="https://picsum.photos/100?random=2" alt="" width="102"/>
           <figcaption>
-            <h3>Qui, ab facere?</h3>
-            <p>Quasi, quas! Asperiores aut consectetur quos.</p>
+            <h3>Asperiores, suscipit assumenda.</h3>
+            <p>Impedit iusto libero molestias minus expedita?</p>
+          </figcaption>
+        </figure>
+      </li>
+      <li :class="{'actif':ouvert===3,}" @click="ouvert=3">
+        <figure>
+          <img src="https://picsum.photos/100?random=3" alt="" width="102"/>
+          <figcaption>
+            <h3>Sint, odit repellendus.</h3>
+            <p>Laborum dolor rem similique eveniet error.</p>
           </figcaption>
         </figure>
       </li>

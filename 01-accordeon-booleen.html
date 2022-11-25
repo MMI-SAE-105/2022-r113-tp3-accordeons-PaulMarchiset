@@ -23,6 +23,28 @@
         <button @click="troisisopen = ! troisisopen">bouton 3</button>
         <p x-show="troisisopen" x-transition>Saepe quibusdam voluptatem tenetur numquam quasi deserunt at reprehenderit est distinctio odit pariatur magnam cupiditate eaque vel error expedita eligendi vero quam doloribus nam sint unde ab, necessitatibus aliquam. Vero.</p>
       </section>
+      <script>
+        (function () {
+    "use strict";
+
+    var listeLI = document.querySelectorAll('ul#accordeon>li');
+
+
+    function basculeClassActif() {
+      for (var i = 0; i < listeLI.length; i++) {
+        var unLi = listeLI[i];
+        unLi.classList.remove('actif');
+      }
+      this.classList.add('actif');
+    }
+
+    for (var i = 0; i < listeLI.length; i++) {
+      var unLI = listeLI[i];
+      unLI.addEventListener("click", basculeClassActif);
+    }
+
+  }());
+      </script>
     </div>
   </body>
 </html>
