@@ -5,8 +5,88 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Onglets</title>
+    <script
+      defer
+      src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem;
+      }
+      header a {
+        color: #fff;
+        text-decoration: none;
+      }
+      header a:hover {
+        text-decoration: underline;
+      }
+      #onglets {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        cursor: pointer;
+      }
+      #onglets li {
+        background-color: #333;
+        color: #fff;
+        padding: 1rem;
+        cursor: pointer;
+      }
+      #onglets li:hover {
+        background-color: #555;
+      }
+      #onglets li.actif {
+        background-color: #555;
+      }
+      #onglets li.actif:hover {
+        background-color: #555;
+      }
+      #onglets li figure {
+        display: flex;
+        gap: 1rem;
+      }
+      #onglets li figure img {
+        width: 100px;
+      }
+      #onglets li figure figcaption {
+        flex: 1;
+      }
+      #onglets li figure figcaption h3 {
+        margin: 0;
+      }
+      #onglets li figure figcaption p {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
     <h1>Onglets</h1>
+    <div id="onglets" x-data="{
+      ouvert : 1,
+     }">
+     <ul role="tablist">
+      <li role="tab" :class="{'actif':ouvert===1,}" @click="ouvert=1">Onglet 1</li>
+      <li role="tab" :class="{'actif':ouvert===2,}" @click="ouvert=2">Onglet 2</li>
+      <li role="tab" :class="{'actif':ouvert===3,}" @click="ouvert=3">Onglet 3</li>
+     </ul>
+     <div>
+      <div role="tabpanel" x-show="ouvert === 1">
+        <h1>Panneau 1</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, delectus fugit veniam cum asperiores cupiditate neque, odio vel sequi tenetur minima amet sunt, rerum consequatur ipsam. Temporibus ducimus nostrum odio.</p>
+      </div>
+      <div role="tabpanel" x-show="ouvert === 2">
+        <h1>Panneau 2</h1>
+        <p>Exercitationem, porro. Nesciunt quo repellendus saepe sapiente obcaecati possimus, veritatis dignissimos ducimus quidem ipsum doloremque maxime culpa, earum illo! Voluptate cupiditate laudantium laborum. Perferendis, quae consectetur ipsum debitis repellat magnam?</p>
+      </div>
+      <div role="tabpanel" x-show="ouvert === 3">
+        <h1>Panneau 3</h1>
+        <p>Aliquid vitae impedit incidunt exercitationem, doloremque, quam consequatur pariatur, quisquam amet corrupti asperiores obcaecati. Nam sit a sapiente nostrum laudantium magni delectus cumque natus, reiciendis non sequi voluptatibus officiis veniam.</p>
+      </div>
+     </div>
   </body>
 </html>
